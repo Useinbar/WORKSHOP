@@ -20,7 +20,8 @@ body{
 
 .pfooter{
     margin-left: 10px;
-    color: #1a1a1a;
+	color: #1a1a1a;
+	font-size: 18px;
 }
 
 
@@ -151,32 +152,16 @@ li{
 }
 
 
-                             /* OTHER */
-.container{
-    width: 90%;
-    max-width: 120rem;
-    height: 100%;
-    margin: 0 auto;
-    position: relative;
-}
+							 /* OTHER */
+							
 
 
 
 
 
-@keyframes pulse{
-    0%{
-        box-shadow: 0 0 0 0 rgba(253, 87, 191, 0.99);
-    }
-    70%{
-        box-shadow: 0 0 0 2rem rgba(253, 87, 191, 0);
-    }
-    100%{
-        box-shadow: 0 0 0 0 rgba(253, 87, 191, 0);
-    }
-}
+							 /* RESPONSIVE */
 
-/*Start media queries*/
+
 @media screen and (max-width: 768px){
 
     .landing-text h1{

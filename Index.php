@@ -4,7 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="icon" type="favicon" href="medias/Logo.png">
+    <link rel="icon" type="favicon" href="medias/Logo.png" alt="Logo EPSI Grenoble">
+    <meta name="Description" content="Site du BDE EPSI Grenoble.">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link href="https://fonts.googleapis.com/css?family=Livvic|Ubuntu&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -25,8 +26,8 @@
                 <li><a href="suggestion.php" class="nav-link">Suggestion</a> </li>
         </nav>
         <div class="landing-text">
+
             <h1>GROSSE FOLLE</h1>
-            <h6></h6>
         </div>
     </header>
 
