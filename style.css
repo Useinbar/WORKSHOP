@@ -1,4 +1,35 @@
 html{
-    background-color: #1A1A1A;
-    color: white;
+    background-color: #1A1A1A; 
+	color: white;
 }
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+	padding: 0px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.sectionCenter{
+    min-height: 45em;
+}
+
+
+                                /* FOOTER */
+
+
+#footer{
+    background-color: #73b299;
+    margin: 0px;
+    padding: 0px;
+}
+
+.pfooter{
+    margin-left: 10px;
+    color: #1a1a1a;
+}
+
+
+                             /* NAV BAR*/
+
