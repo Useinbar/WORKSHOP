@@ -14,4 +14,11 @@
             <li><a href="#"></a>Suggestion d'évenements</li>
         </ul>
     </header>
+    <footer id="footer">
+        <main>
+            <p class="pfooter">Créé avec ❤️️ à Grenoble, France 🗻</p>
+            <p class="pfooter2"></p>
+            <p class="pfooter">© 2019 BDE EPSI, Tous droits réservés.</p>
+        </main>
+    </footer>
 </html>
