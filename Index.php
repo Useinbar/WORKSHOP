@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link href="https://fonts.googleapis.com/css?family=Livvic|Ubuntu&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
 	<title>BDE EPSI</title>
     </head>
@@ -26,7 +27,7 @@
             </ul>
         </nav>
         <div class="landing-text">
-            <h1>Charles Poncy Calixte</h1>
+            <h1>Charles Poncy Calixteux</h1>
             <h6>Etudiant en informatique</h6>
         </div>
     </header>
