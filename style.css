@@ -5,7 +5,7 @@ body{
     padding: 0px;
 	background-color: #1A1A1A; 
 	color: white;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Livvic', sans-serif;
 }
 
 
@@ -15,13 +15,22 @@ body{
 #footer{
     background-color: #73b299;
     margin: 0px;
-    padding: 0px;
+	padding: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 160px; 
 }
 
 .pfooter{
-    margin-left: 10px;
+    margin-left: 30px;
 	color: #1a1a1a;
 	font-size: 18px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 
@@ -152,13 +161,6 @@ li{
 }
 
 
-							 /* OTHER */
-							
-
-
-
-
-
 							 /* RESPONSIVE */
 
 
@@ -173,6 +175,7 @@ li{
     }
 
     .nav-list{
+		display: flex;
         flex-direction: column;
     }
 
@@ -181,7 +184,7 @@ li{
     }
 
     .nav-link{
-        font-size: 4.5rem;
+        font-size: 3rem;
     }
 }
 
@@ -191,7 +194,7 @@ li{
         right: 2rem;
     }
     .landing-text h1{
-        font-size: 8rem;
+        font-size: 5rem;
     }
     
     .landing-text h6{
@@ -199,7 +202,7 @@ li{
     }
 
     .nav-link{
-        font-size: 3.5rem;
+        font-size: 1rem;
     }
 
 }

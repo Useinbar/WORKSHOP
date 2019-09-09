@@ -7,10 +7,10 @@
     <link rel="icon" type="favicon" href="medias/Logo.png" alt="Logo EPSI Grenoble">
     <meta name="Description" content="Site du BDE EPSI Grenoble.">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<link href="https://fonts.googleapis.com/css?family=Livvic|Ubuntu&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Livvic|Ubuntu:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
-	<title>BDE EPSI</title>
+	<title>BDE EPSI Accueil</title>
     </head>
     <header>
         <div class="menu-toggler">
@@ -26,8 +26,7 @@
                 <li><a href="suggestion.php" class="nav-link">Suggestion</a> </li>
         </nav>
         <div class="landing-text">
-
-            <h1>GROSSE FOLLE</h1>
+            <h1>BDE EPSI GRENOBLE</h1>
         </div>
     </header>
 
@@ -36,11 +35,11 @@
 		<p>Test</p>
 	</section>
     <footer id="footer">
-        <main>
-            <p class="pfooter">Créé avec ❤️️ à Grenoble, France 🗻</p>
-            <p class="pfooter">© 2019 BDE EPSI, Tous droits réservés.</p>
-        </main>
-    </footer>
+        <p class="pfooter">Créé avec ❤️️ à Grenoble, France 🗻</p>
+        <p class="pfooter">© 2019 BDE EPSI, Tous droits réservés.</p>
+	</footer>
+	
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="main.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
