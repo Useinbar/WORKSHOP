@@ -19,17 +19,21 @@ body{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	min-height: 160px; 
+    min-height: 140px; 
+    min-width: auto;
 }
 
-.pfooter{
+.footerUp{
     margin-left: 30px;
 	color: #1a1a1a;
 	font-size: 18px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.footerDown{
+    margin-left: 30px;
+	color: #1a1a1a;
+	font-size: 18px;
 	font-family: 'Ubuntu', sans-serif;
 }
 
@@ -159,6 +163,32 @@ li{
     font-size: 2rem;
     font-weight: 300px;
 }
+
+
+                             /* SCROLL BAR */
+                             
+html{
+    scrollbar-color: #505050 #252525;
+}
+
+/* Chrome */
+
+::-webkit-scrollbar {
+    width: 15px;
+    background: #d6d6d6;
+    border-left: 1px solid #d6d6d6;
+  }
+
+::-webkit-scrollbar-track {
+    background: #252525;
+  }
+  
+::-webkit-scrollbar-thumb {
+    background: #505050;
+  }
+
+
+
 
 
 							 /* RESPONSIVE */

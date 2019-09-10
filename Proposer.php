@@ -35,8 +35,8 @@
 		<p>Test</p>
 	</section>
     <footer id="footer">
-        <p class="pfooter">Créé avec ❤️️ à Grenoble, France 🗻</p>
-        <p class="pfooter">© 2019 BDE EPSI, Tous droits réservés.</p>
+        <p class="footerUp">Créé avec ❤️️ à Grenoble, France 🗻</p>
+        <p class="footerDown">© 2019 BDE EPSI, Tous droits réservés.</p>
 	</footer>
 	
 
