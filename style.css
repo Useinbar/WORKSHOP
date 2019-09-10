@@ -40,6 +40,7 @@ body{
 
                              /* NAV BAR*/
 
+
 header{
     width: 100%;
     height: 100vh;
@@ -51,7 +52,8 @@ header{
     position: fixed;
     top: -100vh;
     z-index: 50;
-    background-color: #16162d;
+   /* background-color: #16162d; */
+   background: linear-gradient(to top, #2F4858, #73B299); 
     border-bottom-right-radius: 100%;
     border-bottom-left-radius: 100%;
     transition: all 650ms cubic-bezier(1,0,0,1);
@@ -72,7 +74,7 @@ li{
 }
 
 .nav-link{
-    font-family: 'The Historia Demo', sans-serif;
+    font-family: 'Livvic', sans-serif;
     font-size: 5rem;
 	padding: 1rem;
 	text-decoration: none;
@@ -81,7 +83,7 @@ li{
 
 .nav-link:hover,
 .nav-link:focus{
-    background: linear-gradient(to top, #73b299, #e1e1e1); 
+    background: linear-gradient(to top, #73B299, white); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -110,7 +112,7 @@ li{
 }
 
 .bar{
-    background: linear-gradient(to right, #73b299, #e1e1e1);
+    background: linear-gradient(to right, #487260, #e1e1e1);
     width: 100%;
     height: 4px;
     border-radius: .8rem;
@@ -188,9 +190,6 @@ html{
   }
 
 
-
-
-
 							 /* RESPONSIVE */
 
 
@@ -235,4 +234,10 @@ html{
         font-size: 1rem;
     }
 
+}
+
+@media screen and (max-width: 1920px){
+    .nav-link{
+        font-size: 3.5rem;
+    }
 }

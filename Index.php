@@ -26,7 +26,7 @@
                 <li><a href="suggestion.php" class="nav-link">Suggestion</a> </li>
         </nav>
         <div class="landing-text">
-            <h1>BDE EPSI GRENOBLE</h1>
+            <h1>Campus HEP Grenoble</h1>
         </div>
     </header>
 
