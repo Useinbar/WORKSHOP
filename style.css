@@ -3,7 +3,7 @@ body{
     flex-direction: column;
     margin: 0px;
     padding: 0px;
-	background-color: #1A1A1A; 
+    background-color: #1A1A1A;
 	color: white;
 	font-family: 'Livvic', sans-serif;
 }
@@ -13,9 +13,21 @@ body{
 
 .sectionCenter{
     min-width: 100%;
-    min-height: 200px;
+    min-height: 200px; 
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.titleEvent{
+    font-family: 'Livvic', sans-serif;
+    font-size: 28px;
+}
+
+.centerEvent1{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -24,12 +36,12 @@ body{
 
 
 #footer{
-    background-color: #73b299;
+    background-color: #73B299;
     margin: 0px;
 	padding: 0px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-around;
     min-height: 140px; 
     min-width: auto;
 }
@@ -179,12 +191,15 @@ li{
 
 
                              /* SCROLL BAR */
+    
                              
+    /* Firefox */
+
 html{
     scrollbar-color: #505050 #252525;
 }
 
-/* Chrome */
+    /* Chromium */
 
 ::-webkit-scrollbar {
     width: 15px;
