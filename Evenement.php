@@ -1,3 +1,12 @@
+<?php 
+$bdd = new PDO("mysql:host=127.0.0.1;dbname=test;charset=utf8", "root", "");
+
+$articles = $bdd->query('SELECT * FROM articles ORDER BY id DESC');
+
+
+
+?>
+
 <!doctype html>
 <html lang="fr">
     <head>
@@ -30,10 +39,14 @@
         </div>
     </header>
 
- 
-	<section class="sectionCenter">
-		<p>Test</p>
-	</section>
+    <div>
+        <ul>
+            <?php while ($a=$articles->fetch()) { ?>
+            <li><?= $a['titre'] ?></li>
+            <?php } ?>
+        </ul>    
+    </div>
+
     <footer id="footer">
         <p class="footerUp">Créé avec ❤️️ à Grenoble, France 🗻</p>
         <p class="footerDown">© 2019 BDE EPSI Grenoble, Tous droits réservés.</p>
