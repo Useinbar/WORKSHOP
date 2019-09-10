@@ -29,9 +29,16 @@
             <h1>Campus HEP Grenoble</h1>
         </div>
     </header>
-	<section class="sectionCenter">
-		<p>Test</p>
+    
+    
+    <section class="sectionCenter">
+        <section class="centerTitleEvent1">
+            <h3 id=""> TITLE EVENT</h3>
+            <p id="centerDescEvent1"></p>
+        </section>
 	</section>
+    
+    
     <footer id="footer">
         <p class="footerUp">Créé avec ❤️️ à Grenoble, France 🗻</p>
         <p class="footerDown">© 2019 BDE EPSI Grenoble, Tous droits réservés.</p>

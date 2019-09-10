@@ -32,7 +32,7 @@
 
 
 	<section class="sectionCenter">
-		<p>Test</p>
+        
     </section>
     
 
