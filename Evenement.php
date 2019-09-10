@@ -1,10 +1,28 @@
 <?php 
 $bdd = new PDO("mysql:host=127.0.0.1;dbname=test;charset=utf8", "root", "");
 
-$articles = $bdd->query('SELECT * FROM articles ORDER BY id DESC');
+if (isset($_GET['id']) AND !empty($_GET['id'])){
+    $get_id = htmlspecialchars($_GET['id']);
 
+    $evenement = $bdd->prepare('SELECT * FROM evenement WHERE id = ?');
+    $evenement->execute(array($get_id));
 
+    if($evenement->rowCount() == 1){
+        $evenement = $evenement->fetch();
+        $nom_evenement = $evenement['nom_evenement'];
+        $type_evenement = $evenement['type_evenement'];
+        $date_evenement = $evenement['date_evenement'];
+        $horaire_evenement = $evenement['horaire_evenement'];
+        $description_evenement = $evenement['description_evenement'];
+        
 
+    } else {
+        die('Cet evenement n\'existe pas');
+    }
+
+} else {
+    die ('Erreur');
+}
 ?>
 
 <!doctype html>
@@ -40,11 +58,8 @@ $articles = $bdd->query('SELECT * FROM articles ORDER BY id DESC');
     </header>
 
     <div>
-        <ul>
-            <?php while ($a=$articles->fetch()) { ?>
-            <li><?= $a['titre'] ?></li>
-            <?php } ?>
-        </ul>    
+        <h1><?= $nom_evenement ?></h1>
+        <p><? $description_evenement ?></p>   
     </div>
 
     <footer id="footer">
