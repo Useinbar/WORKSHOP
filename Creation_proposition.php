@@ -1,13 +1,28 @@
 <?php 
 $bdd = new PDO("mysql:host=127.0.0.1;dbname=test;charset=utf8", "root", "");
 
-$evenement = $bdd->query('SELECT * FROM evenement ORDER BY id DESC');
+if (isset($_POST['nom_proposition'], $_POST['description_proposition'], $_POST['date_proposition'])){
+    if(!empty($_POST['nom_proposition']) AND !empty($_POST['description_proposition']) AND !empty($_POST['date_proposition'])){
 
+        $nom_proposition = htmlspecialchars($_POST['nom_proposition']);
+        $description_proposition = htmlspecialchars($_POST['description_proposition']);
+        $date_proposition = htmlspecialchars($_POST['date_proposition']);
+        
+        
+
+        $ins = $bdd->prepare('INSERT INTO proposition (nom_proposition, description_proposition, date_proposition) VALUES(?, ?, ?)');
+        $ins->execute(array($nom_proposition, $description_proposition, $date_proposition));  
+
+        $message = 'Votre proposition a bien était posté';
+
+    } else {
+            $message='veuillez remplir tous les champs';
+        }
+}
 ?>
 
-
 <!doctype html>
-<html lang="fr">
+<html lang="fr"> 
     <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,13 +33,13 @@ $evenement = $bdd->query('SELECT * FROM evenement ORDER BY id DESC');
 	<link href="https://fonts.googleapis.com/css?family=Livvic|Ubuntu:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
-	<title>BDE Calendrier</title>
+	<title>BDE Evenement</title>
     </head>
     <header>
         <div class="menu-toggler">
             <div class="bar half start"></div>
             <div class="bar"></div>
-            <div class="bar half end"></div>
+            <div class="bar half end"></div>    
         </div>
         <nav class="top-nav">
             <ul class="nav-list">
@@ -38,19 +53,21 @@ $evenement = $bdd->query('SELECT * FROM evenement ORDER BY id DESC');
         </div>
     </header>
 
+    <form method="POST">
+        <input type="text" name="nom_proposition" placeholder="Nom"><br>
+        <textarea name="description_proposition" placeholder="Description"></textarea><br>
+        <input type="date" name="date_proposition" placeholder="Date"><br>
+        <input type="submit" value="Valider">
+    </form>
 
-	<div>
-        <ul>
-            <?php while ($a = $evenement->fetch()) { ?>
-            <li><a href="evenement.php?id=<?= $a['id'] ?>"><?= $a['nom_evenement'] ?></a></li>
-            <?php } ?>
-        </ul>    
-    </div>
-    
-
+    <?php if(isset($message)){ echo $message; } ?>
+ 
+	<section class="sectionCenter">
+		<p>Test</p>
+	</section>
     <footer id="footer">
-        <p class="footerUp">Créé avec ❤️️ à Grenoble, France 🗻</p>
-        <p class="footerDown">© 2019 BDE EPSI Grenoble, Tous droits réservés.</p>
+        <p class="pfooter">Créé avec ❤️️ à Grenoble, France 🗻</p>
+        <p class="pfooter">© 2019 BDE EPSI, Tous droits réservés.</p>
 	</footer>
 	
 
