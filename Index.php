@@ -32,9 +32,17 @@
     
     
     <section class="sectionCenter">
-        <section class="centerTitleEvent1">
-            <h3 id=""> TITLE EVENT</h3>
-            <p id="centerDescEvent1"></p>
+        <section class="centerEvent1">
+            <h3 id="centerTitleEvent1" class="titleEvent">TITLE EVENT 1</h3>
+            <p id="centerDescEvent1" class="descEvent">DESC EVENT 1</p>
+        </section>
+        <section class="centerEvent2">
+            <h3 id="centerTitleEvent2" class="titleEvent">TITLE EVENT 2</h3>
+            <p id="centerDescEvent2" class="descEvent">DESC EVENT 2</p>
+        </section>
+        <section class="centerEvent3">
+            <h3 id="centerTitleEvent3" class="titleEvent">TITLE EVENT 2</h3>
+            <p id="centerDescEvent3" class="descEvent">DESC EVENT 2</p>
         </section>
 	</section>
     
