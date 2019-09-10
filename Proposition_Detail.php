@@ -1,9 +1,27 @@
 <?php 
 $bdd = new PDO("mysql:host=127.0.0.1;dbname=test;charset=utf8", "root", "");
 
-$proposition = $bdd->query('SELECT * FROM proposition ORDER BY id DESC');
+if (isset($_GET['id']) AND !empty($_GET['id'])){
+    $get_id = htmlspecialchars($_GET['id']);
 
+    $proposition = $bdd->prepare('SELECT * FROM proposition WHERE id = ?');
+    $proposition->execute(array($get_id));
+
+    if($proposition->rowCount() == 1){
+        $proposition = $proposition->fetch();
+        $nom_proposition = $proposition['nom_proposition'];
+        $description_proposition = $proposition['description_proposition'];
+        $date_proposition = $proposition['date_proposition'];
+
+    } else {
+        die('Cet proposition n\'existe pas');
+    }
+
+} else {
+    die ('Erreur');
+}
 ?>
+
 <!doctype html>
 <html lang="fr">
     <head>
@@ -16,7 +34,7 @@ $proposition = $bdd->query('SELECT * FROM proposition ORDER BY id DESC');
 	<link href="https://fonts.googleapis.com/css?family=Livvic|Ubuntu:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
-	<title>BDE Proposer</title>
+	<title>BDE Evenement</title>
     </head>
     <header>
         <div class="menu-toggler">
@@ -37,13 +55,10 @@ $proposition = $bdd->query('SELECT * FROM proposition ORDER BY id DESC');
     </header>
 
     <div>
-        <ul>
-            <?php while ($a = $proposition->fetch()) { ?>
-            <li><a href="Proposition_Detail.php?id=<?= $a['id'] ?>"><?= $a['nom_proposition'] ?></a></li>
-            <?php } ?>
-        </ul>    
+        <h1><?= $nom_proposition ?></h1>
+        <p><?= $description_proposition ?></p>   
     </div>
-	
+
     <footer id="footer">
         <p class="footerUp">Créé avec ❤️️ à Grenoble, France 🗻</p>
         <p class="footerDown">© 2019 BDE EPSI Grenoble, Tous droits réservés.</p>

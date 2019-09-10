@@ -59,7 +59,7 @@ if (isset($_GET['id']) AND !empty($_GET['id'])){
 
     <div>
         <h1><?= $nom_evenement ?></h1>
-        <p><? $description_evenement ?></p>   
+        <p><?= $description_evenement ?></p>   
     </div>
 
     <footer id="footer">
