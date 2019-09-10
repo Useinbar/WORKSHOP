@@ -38,7 +38,7 @@
 
     <footer id="footer">
         <p class="footerUp">Créé avec ❤️️ à Grenoble, France 🗻</p>
-        <p class="footerDown">© 2019 BDE EPSI, Tous droits réservés.</p>
+        <p class="footerDown">© 2019 BDE EPSI Grenoble, Tous droits réservés.</p>
 	</footer>
 	
 
