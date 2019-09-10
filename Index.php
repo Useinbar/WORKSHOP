@@ -20,23 +20,21 @@
         </div>
         <nav class="top-nav">
             <ul class="nav-list">
-                <li><a href="index.php" class="nav-link">Aceuil</a></li>
+                <li><a href="index.php" class="nav-link">Accueil</a></li>
                 <li><a href="calendrier.php" class="nav-link">Calendrier</a></li>
                 <li><a href="proposer.php" class="nav-link">Proposer</a> </li>
                 <li><a href="suggestion.php" class="nav-link">Suggestion</a> </li>
         </nav>
         <div class="landing-text">
-            <h1>BDE EPSI GRENOBLE</h1>
+            <h1>Campus HEP Grenoble</h1>
         </div>
     </header>
-
- 
 	<section class="sectionCenter">
 		<p>Test</p>
 	</section>
     <footer id="footer">
-        <p class="pfooter">Créé avec ❤️️ à Grenoble, France 🗻</p>
-        <p class="pfooter">© 2019 BDE EPSI, Tous droits réservés.</p>
+        <p class="footerUp">Créé avec ❤️️ à Grenoble, France 🗻</p>
+        <p class="footerDown">© 2019 BDE EPSI Grenoble, Tous droits réservés.</p>
 	</footer>
 	
 
