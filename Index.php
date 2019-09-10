@@ -29,8 +29,6 @@
             <h1>Campus HEP Grenoble</h1>
         </div>
     </header>
-
- 
 	<section class="sectionCenter">
 		<p>Test</p>
 	</section>
