@@ -1,3 +1,11 @@
+<?php 
+$bdd = new PDO("mysql:host=127.0.0.1;dbname=test;charset=utf8", "root", "");
+
+$evenement = $bdd->query('SELECT * FROM evenement ORDER BY id DESC');
+
+?>
+
+
 <!doctype html>
 <html lang="fr">
     <head>
@@ -31,9 +39,13 @@
     </header>
 
 
-	<section class="sectionCenter">
-		<p>Test</p>
-    </section>
+	<div>
+        <ul>
+            <?php while ($a = $evenement->fetch()) { ?>
+            <li><a href="evenement.php?id=<?= $a['id'] ?>"><?= $a['nom_evenement'] ?></a></li>
+            <?php } ?>
+        </ul>    
+    </div>>
     
 
     <footer id="footer">

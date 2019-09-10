@@ -33,7 +33,7 @@ if (isset($_POST['nom_evenement'], $_POST['type_evenement'], $_POST['date_evenem
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link href="https://fonts.googleapis.com/css?family=Livvic|Ubuntu:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	<link rel="stylesheet" href="styl.css">
+	<link rel="stylesheet" href="style.css">
 	<title>BDE Evenement</title>
     </head>
     <header>
