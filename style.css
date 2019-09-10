@@ -5,7 +5,7 @@ body{
     padding: 0px;
     background-color: #1A1A1A;
 	color: white;
-	font-family: 'Livvic', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 }
 
                                 /* Section Center */
@@ -24,7 +24,7 @@ body{
     font-size: 28px;
 }
 
-.centerEvent1{
+.sectionCenterIn{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -35,9 +35,13 @@ body{
                                 /* FOOTER */
 
 
+
 #footer{
-    background-color: #73B299;
-    margin: 0px;
+    background-color: #56b887;
+    margin-top: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
 	padding: 0px;
 	display: flex;
 	flex-direction: column;
@@ -50,14 +54,14 @@ body{
     margin-left: 30px;
 	color: #1a1a1a;
 	font-size: 18px;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 .footerDown{
     margin-left: 30px;
 	color: #1a1a1a;
 	font-size: 18px;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 
@@ -66,7 +70,7 @@ body{
 
 header{
     width: 100%;
-    height: 100vh;
+    height: 70vh;
 }
 
 .top-nav{
@@ -75,8 +79,8 @@ header{
     position: fixed;
     top: -100vh;
     z-index: 50;
-   /* background-color: #16162d; */
-   background: linear-gradient(to top, #2F4858, #73B299); 
+    /* background-color: #16162d; */
+    background-image: linear-gradient(to right top, #29381b, #39532d, #476f41, #538d59, #5dac73, #5ab17c, #57b785, #54bc8f, #4aa784, #439379, #3d7f6c, #386c5f);
     border-bottom-right-radius: 100%;
     border-bottom-left-radius: 100%;
     transition: all 650ms cubic-bezier(1,0,0,1);
@@ -106,7 +110,7 @@ li{
 
 .nav-link:hover,
 .nav-link:focus{
-    background: linear-gradient(to top, #73B299, white); 
+    background: linear-gradient(to top, #1a1a1a, #363434); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -135,7 +139,7 @@ li{
 }
 
 .bar{
-    background: linear-gradient(to right, #487260, #e1e1e1);
+    background-image: linear-gradient(to right top, #29381b, #39532d, #476f41, #538d59, #5dac73, #5ab17c, #57b785, #54bc8f, #4aa784, #439379, #3d7f6c, #386c5f);
     width: 100%;
     height: 4px;
     border-radius: .8rem;
