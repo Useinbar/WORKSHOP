@@ -47,6 +47,7 @@ if (isset($_POST['nom_proposition'], $_POST['description_proposition'], $_POST['
                 <li><a href="calendrier.php" class="nav-link">Calendrier</a></li>
                 <li><a href="proposer.php" class="nav-link">Proposer</a> </li>
                 <li><a href="suggestion.php" class="nav-link">Suggestion</a> </li>
+            </ul>
         </nav>
         <div class="landing-text">
             <h1>BDE EPSI GRENOBLE</h1>

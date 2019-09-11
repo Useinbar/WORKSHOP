@@ -22,8 +22,9 @@
             <ul class="nav-list">
                 <li><a href="index.php" class="nav-link">Accueil</a></li>
                 <li><a href="calendrier.php" class="nav-link">Calendrier</a></li>
-                <li><a href="proposer.php" class="nav-link">Proposer</a> </li>
+                <li><a href="proposer.php" class="nav-link">Proposer</a></li>
                 <li><a href="suggestion.php" class="nav-link">Suggestion</a> </li>
+            </ul>
         </nav>
         <div class="landing-text">
             <h1>Campus HEP Grenoble</h1>
@@ -50,7 +51,10 @@
     <footer id="footer">
         <p class="footerUp">Créé avec ❤️️ à Grenoble, France 🗻</p>
         <p class="footerDown">© 2019 BDE EPSI Grenoble, Tous droits réservés.</p>
-	</footer>
+        <ul>
+            <li><a>Facebook</a></li>
+        </ul>
+    </footer>
 	
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

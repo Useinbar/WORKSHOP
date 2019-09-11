@@ -32,6 +32,7 @@ $evenement = $bdd->query('SELECT * FROM evenement ORDER BY id DESC');
                 <li><a href="calendrier.php" class="nav-link">Calendrier</a></li>
                 <li><a href="proposer.php" class="nav-link">Proposer</a> </li>
                 <li><a href="suggestion.php" class="nav-link">Suggestion</a> </li>
+            </ul>
         </nav>
         <div class="landing-text">
             <h1>BDE EPSI GRENOBLE</h1>
