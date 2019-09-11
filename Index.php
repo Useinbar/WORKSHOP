@@ -7,7 +7,7 @@
     <link rel="icon" type="favicon" href="medias/Logo.png" alt="Logo EPSI Grenoble">
     <meta name="Description" content="Site du BDE EPSI Grenoble.">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<link href="https://fonts.googleapis.com/css?family=Livvic|Ubuntu:700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Livvic|Source+Sans+Pro:600|Ubuntu:300&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
 	<title>BDE EPSI Accueil</title>
@@ -32,17 +32,17 @@
     
     
     <section class="sectionCenter">
-        <section class="centerEvent1">
-            <h3 id="centerTitleEvent1" class="titleEvent">TITLE EVENT 1</h3>
-            <p id="centerDescEvent1" class="descEvent">DESC EVENT 1</p>
+        <section id="centerEvent1" class="sectionCenterIn">
+            <h3 id="centerTitleEvent1" class="titleEvent">Title event 1</h3>
+            <p id="centerDescEvent1" class="descEvent">Desc event 1</p>
         </section>
-        <section class="centerEvent2">
-            <h3 id="centerTitleEvent2" class="titleEvent">TITLE EVENT 2</h3>
-            <p id="centerDescEvent2" class="descEvent">DESC EVENT 2</p>
+        <section id="centerEvent2" class="sectionCenterIn">
+            <h3 id="centerTitleEvent2" class="titleEvent">Title event 2</h3>
+            <p id="centerDescEvent2" class="descEvent">Desc event 2</p>
         </section>
-        <section class="centerEvent3">
-            <h3 id="centerTitleEvent3" class="titleEvent">TITLE EVENT 2</h3>
-            <p id="centerDescEvent3" class="descEvent">DESC EVENT 2</p>
+        <section id="centerEvent3" class="sectionCenterIn">
+            <h3 id="centerTitleEvent3" class="titleEvent">Title event 3</h3>
+            <p id="centerDescEvent3" class="descEvent">Desc event 3</p>
         </section>
 	</section>
     
