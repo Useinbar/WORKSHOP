@@ -56,7 +56,12 @@ if (isset($_GET['id']) AND !empty($_GET['id'])){
 
     <div>
         <h1><?= $nom_proposition ?></h1>
-        <p><?= $description_proposition ?></p>   
+        <p><?= $description_proposition ?></p>
+
+        <a href="php/Like_dislike.php?t=1&id<?=$id?>">Like</a>
+        <br>
+        <a href="php/Like_dislike.php?t=2&id<?=$id?>">Dislike</a>
+           
     </div>
 
     <footer id="footer">
