@@ -33,6 +33,8 @@ if (isset($_COOKIE['pseudo']))
 
   //par défaut, on affiche le formulaire (quand il validera le formulaire sans erreur avec l'inscription validée, on l'affichera plus)
   $AfficherFormulaire=1;
+  //création des htmlspecialchars pour empêcher les injections.
+    
   //traitement du formulaire:
   if(isset($_POST['username'],$_POST['prenom'],$_POST['nom'],$_POST['password'],$_POST['mail'],$_POST['classe'])){//l'utilisateur à cliqué sur "S'inscrire", on demande donc si les champs sont défini avec "isset"
       if(empty($_POST['username'])){//le champ pseudo est vide, on arrête l'exécution du script et on affiche un message d'erreur
