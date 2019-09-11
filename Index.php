@@ -49,10 +49,14 @@
     
     
     <footer id="footer">
-        <p class="footerUp">Créé avec ❤️️ à Grenoble, France 🗻</p>
-        <p class="footerDown">© 2019 BDE EPSI Grenoble, Tous droits réservés.</p>
-        <ul>
-            <li><a>Facebook</a></li>
+        <p class="footerUp">Créé avec ❤️️ à Grenoble, France 🗻
+        <br>
+        <br>
+        © 2019 BDE EPSI Grenoble, Tous droits réservés.</p>
+        <ul class="footerList">
+            <li><img src="medias/facebook.svg" height="30px"><a href="https://www.facebook.com/bdeepsigrenoble" target="blank" class="footerLink">Facebook</a></li>
+            <li><img src="medias/instagram.svg"  height="30px"><a href="https://www.instagram.com/bdeepsigre/" target="blank" class="footerLink">Instagram</a></li>
+            <li><img src="medias/discord.svg" height="30px"><a href="https://discordapp.com/" target="blank" class="footerLink">Discord</a> </li>
         </ul>
     </footer>
 	
