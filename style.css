@@ -21,14 +21,32 @@ body{
 
 .titleEvent{
     font-family: 'Livvic', sans-serif;
-    font-size: 28px;
+    font-size: 36px;
+}
+
+.descEvent{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
 }
 
 .sectionCenterIn{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
+    width: 60%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.sectionCenterIn{
+    box-sizing: border-box;
+    background: linear-gradient(#1a1a1a, #1a1a1a), 
+    linear-gradient(to right top, #29381b, #39532d, #476f41, #538d59, #5dac73, #5ab17c, #57b785, #54bc8f, #4aa784, #439379, #3d7f6c, #386c5f);
+    border: 5px solid transparent;
+    background-repeat: no-repeat;
+    background-origin: padding-box, border-box;
+    border-radius: 7px;
 }
 
 
@@ -181,7 +199,7 @@ li{
 .landing-text h1{
     font-size: 7rem;
     font-family: 'Livvic', sans-serif;
-    background: linear-gradient(to top, #73b299, #e1e1e1); 
+    background-image: linear-gradient(to right top, #29381b, #39532d, #476f41, #538d59, #5dac73, #5ab17c, #57b785, #54bc8f, #4aa784, #439379, #3d7f6c, #386c5f);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 1rem;
