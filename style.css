@@ -64,20 +64,21 @@ body{
 	padding: 0px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
-    min-height: 140px; 
+    justify-content: space-around;
+    align-items: center;
+    min-height: 120px; 
     min-width: auto;
 }
 
 .footerUp{
-    margin-left: 30px;
+    margin-left: 0px;
 	color: #1a1a1a;
 	font-size: 18px;
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
 .footerDown{
-    margin-left: 30px;
+    margin-left: 0px;
 	color: #1a1a1a;
 	font-size: 18px;
 	font-family: 'Source Sans Pro', sans-serif;
