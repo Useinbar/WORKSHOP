@@ -1,9 +1,14 @@
+<?php
+session_start();
+// $myusername = $_SESSION['username'];
+include("config.php");
+ ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
 	<title>test</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta charset="utf-8">
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
 
@@ -13,12 +18,25 @@
 	<header>
 		<nav>
 			<ul class="container-fluid">
-				<li style="float: right;"><a class="titre" href="inscription.php">S'inscrire </a></li>
+			<!--	<li style="float: right;"><a class="titre" href="inscription.php">S'inscrire </a></li>
+        <li style="float: left;"><a href="deconnexion.php">Déconnexion</a></li> -->
 			</ul>
 		</nav>
 	</header>
 
+<section>
+  <h1>
+    <?php
+if(!$_SESSION) {
+  echo '<a href="inscription.php">Inscription</a><br />';
+} elseif (isset($_SESSION)) {
+    echo '<a href="deconnexion.php">deconnexion</a> ';
+    echo "Bonjour ", $_SESSION['username'] ;
+}
 
+?>
+  </h1>
+</section>
 
 	<section>
 		<div align="center">
