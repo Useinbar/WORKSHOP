@@ -44,7 +44,7 @@
         </section>
         <section id="centerEvent3" class="sectionCenterIn">
             <h3 id="centerTitleEvent3" class="titleEvent">Title event 3</h3>
-            <p id="centerDescEvent3" class="descEvent">Desc event 3</p>
+            <p id="centerDest3" class="descEvent">Desc event 3</p>
         </section>
 	</section>
     
