@@ -1,3 +1,9 @@
+<?php
+session_start();
+// $myusername = $_SESSION['username'];
+include("../formulaires/config.php");
+ ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
@@ -49,7 +55,7 @@ else {
    }
 }
 
-$requete = "INSERT INTO article (Titre, Date, Commentaire, Photo) VALUES ('".htmlentities(addslashes($_POST['titre']), ENT_QUOTES)."','".date("Y-m-d H:i:s")."','".htmlentities (addslashes($_POST['commentaire']), ENT_QUOTES)."', '".$_FILES['photo']['name']."')";
+$requete = "INSERT INTO article (auteur, Titre, Date, Commentaire, Photo) VALUES ('".htmlentities (addslashes($_SESSION['username']), ENT_QUOTES)."','".htmlentities(addslashes($_POST['titre']), ENT_QUOTES)."','".date("Y-m-d H:i:s")."','".htmlentities (addslashes($_POST['commentaire']), ENT_QUOTES)."', '".$_FILES['photo']['name']."')";
 $resultat = mysqli_query($connect,$requete);
 $identifiant = mysqli_insert_id($connect);
 /* Fermeture de la connexion */

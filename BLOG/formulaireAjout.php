@@ -1,4 +1,10 @@
-<!DOCTYPE html> 
+<?php
+session_start();
+// $myusername = $_SESSION['username'];
+include("../formulaires/config.php");
+ ?>
+
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
    <head>
       <title>Blog</title>

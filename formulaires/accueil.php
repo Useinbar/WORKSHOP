@@ -1,9 +1,10 @@
 <?php
 session_start();
-$myusername = $_SESSION['username'];
+//$myusername = $_SESSION['username'];
 
 include("config.php");
  ?>
+
 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
@@ -13,8 +14,7 @@ include("config.php");
   </head>
   <body>
     <h1>
-      Tu es connecté <?php echo $myusername; ?>
-      </script>
+      Tu es connecté <?php echo $_SESSION['username']; ?>
     </h1>
   </body>
 </html>
