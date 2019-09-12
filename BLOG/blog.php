@@ -26,13 +26,13 @@ include("../formulaires/config.php");
 
    $requete = "SELECT * FROM article ORDER BY Date desc";
    if ($resultat = mysqli_query($connect,$requete)) {
-      date_default_timezone_set('Europe/Paris');
+      date_default_timezone_set("Europe/Paris");
       /* fetch le tableau associatif */
       while ($ligne = mysqli_fetch_assoc($resultat)) {
          echo "Article crée par : ", $ligne['auteur'], ".";
          $dt_debut = date_create_from_format('Y-m-d H:i:s', $ligne['Date']);
          echo "<h3>".$ligne['Titre']."</h3>";
-         echo "<h4>Le ".$dt_debut->format('d/m/Y H:i:s')."</h4>";
+      //   echo "<h4>Le ".$dt_debut->format('d/m/Y H:i:s')."</h4>";
          echo "<div style='width:400px'>".$ligne['Commentaire']." </div>";
          if ($ligne['Photo'] != "") {
             echo "<img src='photos/".$ligne['Photo']."' width='200px' height='200px'/>";
