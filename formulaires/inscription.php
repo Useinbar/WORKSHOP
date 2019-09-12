@@ -34,9 +34,9 @@ if (isset($_COOKIE['pseudo']))
   //par défaut, on affiche le formulaire (quand il validera le formulaire sans erreur avec l'inscription validée, on l'affichera plus)
   $AfficherFormulaire=1;
   //création des htmlspecialchars pour empêcher les injections.
-    
+
   //traitement du formulaire:
-  if(isset($_POST['username'],$_POST['prenom'],$_POST['nom'],$_POST['password'],$_POST['mail'],$_POST['classe'])){//l'utilisateur à cliqué sur "S'inscrire", on demande donc si les champs sont défini avec "isset"
+  if(isset($_POST['username'],$_POST['prenom'],$_POST['nom'],$_POST['password'],$_POST['mail'],$_POST['groupe'])){//l'utilisateur à cliqué sur "S'inscrire", on demande donc si les champs sont défini avec "isset"
       if(empty($_POST['username'])){//le champ pseudo est vide, on arrête l'exécution du script et on affiche un message d'erreur
           echo "Le champ Pseudo est vide.";
       } elseif(!preg_match("#^[a-z0-9]+$#",$_POST['username'])){//le champ pseudo est renseigné mais ne convient pas au format qu'on souhaite qu'il soit, soit: que des lettres minuscule + des chiffres (je préfère personnellement enregistrer le pseudo de mes membres en minuscule afin de ne pas avoir deux pseudo identique mais différents comme par exemple: Admin et admin)
@@ -50,7 +50,7 @@ if (isset($_COOKIE['pseudo']))
       } else {
           //toutes les vérifications sont faites, on passe à l'enregistrement dans la base de données:
           //Bien évidement il s'agit là d'un script simplifié au maximum, libre à vous de rajouter des conditions avant l'enregistrement comme la longueur minimum du mot de passe par exemple
-          if(!mysqli_query($mysqli,"INSERT INTO membres1 SET username='".$_POST['username']."', password='".$_POST['password']."', prenom='".$_POST['prenom']."', nom='".$_POST['nom']."', mail='".$_POST['mail']."', classe='".$_POST['classe']."'")){
+          if(!mysqli_query($mysqli,"INSERT INTO membres1 SET username='".$_POST['username']."', password='".$_POST['password']."', prenom='".$_POST['prenom']."', nom='".$_POST['nom']."', mail='".$_POST['mail']."', groupe='".$_POST['groupe']."'")){
               //on crypte le mot de passe avec la fonction propre à PHP: md5()
               echo "Une erreur s'est produite: ".mysqli_error($mysqli);//je conseille de ne pas afficher les erreurs aux visiteurs mais de l'enregistrer dans un fichier log
           } else {
@@ -86,7 +86,17 @@ if (isset($_COOKIE['pseudo']))
 
           Mot de passe : <input type="password" name="password">
 
-          classe : <input type="varchar" name="classe">
+          <label> choisis ton groupe :
+
+          <select class="groupe" name="groupe">
+            <option value="EPSI">EPSI</option>
+            <option value="IDRAC">IDRAC</option>
+            <option value="SUP2COM">SUP2COM</option>
+            <option value="WIS">WIS</option>
+            <option value="AUTRES">autres</option>
+          </select>
+</label>
+      <!--    classe : <input type="varchar" name="classe"> -->
 
           <input type="submit" value="S'inscrire">
       </form>
