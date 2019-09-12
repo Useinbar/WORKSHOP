@@ -16,7 +16,7 @@
 			<h1><a href="index.php">HEP Campus <span>Grenoble</span></a></h1>
 			<nav>
 				<a href="calendrier.php">Calendrier</a>
-				<a href="proposer.php">Proposer</a>
+				<a href="creation_Evenement.php">Proposer</a>
 				<a href="suggestion.php">Suggestion</a>
 			</nav>
 			<ul>
@@ -27,8 +27,21 @@
 	</header>
 	
 
-	<section>
-	
+	<section class="sectionBackground">
+		<div class="divEventIndex">
+			<section id="centerEvent1" class="sectionCenterIn">
+				<h3 id="centerTitleEvent1" class="titleEvent">Title event 1</h3>
+				<p id="centerDescEvent1" class="descEvent">Desc event 1</p>
+			</section>
+			<section id="centerEvent2" class="sectionCenterIn">
+				<h3 id="centerTitleEvent2" class="titleEvent">Title event 2</h3>
+				<p id="centerDescEvent2" class="descEvent">Desc event 2</p>
+			</section>
+			<section id="centerEvent3" class="sectionCenterIn">
+				<h3 id="centerTitleEvent3" class="titleEvent">Title event 3</h3>
+				<p id="centerDest3" class="descEvent">Desc event 3</p>
+			</section>
+		</div>
 	</section>
 
 
@@ -53,7 +66,7 @@
 		<div class="footer-center">
 			<div>
 				<i class="fa fa-map-marker"></i>
-				<p><span>13 bis rue de la Condamine</span> Gière, France</p>
+				<p><span>13 bis rue de la Condamine</span> 38610 Gières, France</p>
 			</div>
 			<div>
 				<i class="fa fa-envelope"></i>
