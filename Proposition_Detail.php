@@ -9,9 +9,21 @@ if (isset($_GET['id']) AND !empty($_GET['id'])){
 
     if($proposition->rowCount() == 1){
         $proposition = $proposition->fetch();
+        $id = $proposition['id'];
         $nom_proposition = $proposition['nom_proposition'];
         $description_proposition = $proposition['description_proposition'];
         $date_proposition = $proposition['date_proposition'];
+
+
+        //test//
+        $like_proposition = $bdd->prepare('SELECT id FROM like_proposition WHERE id_proposition = ?');
+        $like_proposition->execute(array($id));
+        $like_proposition= $like_proposition->rowCount();
+        $dislike_proposition = $bdd->prepare('SELECT id FROM dislike_proposition WHERE id_proposition = ?');
+        $dislike_proposition->execute(array($id));
+        $dislike_proposition = $dislike_proposition->rowCount();
+
+
 
     } else {
         die('Cet proposition n\'existe pas');
@@ -59,9 +71,9 @@ if (isset($_GET['id']) AND !empty($_GET['id'])){
         <h1><?= $nom_proposition ?></h1>
         <p><?= $description_proposition ?></p>
 
-        <a href="php/Like_dislike.php?t=1&id<?=$id?>">Like</a>
-        <br>
-        <a href="php/Like_dislike.php?t=2&id<?=$id?>">Dislike</a>
+        <a href="php/Like_dislike.php?t=1&id<?=$id?>">Like</a> (<?= $like_proposition?>)
+        <br/>
+        <a href="php/Like_dislike.php?t=2&id<?=$id?>">Dislike</a> (<? $dislike_proposition?>)
            
     </div>
 
