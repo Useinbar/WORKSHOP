@@ -66,10 +66,18 @@ if (isset($_POST['nom_proposition'], $_POST['description_proposition'], $_POST['
 	<section class="sectionCenter">
 		<p>Test</p>
 	</section>
+    
     <footer id="footer">
-        <p class="pfooter">Créé avec ❤️️ à Grenoble, France 🗻</p>
-        <p class="pfooter">© 2019 BDE EPSI, Tous droits réservés.</p>
-	</footer>
+        <p class="footerUp">Créé avec ❤️️ à Grenoble, France 🗻
+        <br>
+        <br>
+        © 2019 BDE EPSI Grenoble, Tous droits réservés.</p>
+        <ul class="footerList">
+            <li><img src="medias/facebook.png" height="30px"><a href="https://www.facebook.com/bdeepsigrenoble" target="blank" class="footerLink">Facebook</a></li>
+            <li><img src="medias/instagram.png"  height="30px"><a href="https://www.instagram.com/bdeepsigre/" target="blank" class="footerLink">Instagram</a></li>
+            <li><img src="medias/discord.png" height="30px"><a href="https://discordapp.com/" target="blank" class="footerLink">Discord</a> </li>
+        </ul>
+    </footer>
 	
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
