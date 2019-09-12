@@ -51,6 +51,7 @@ if (isset($_GET['id']) AND !empty($_GET['id'])){
                 <li><a href="calendrier.php" class="nav-link">Calendrier</a></li>
                 <li><a href="proposer.php" class="nav-link">Proposer</a> </li>
                 <li><a href="suggestion.php" class="nav-link">Suggestion</a> </li>
+                <li><a href="formulaires/index.php" class="nav-link">Connexion</a> </li>
             </ul>
         </nav>
         <div class="landing-text">
@@ -58,9 +59,12 @@ if (isset($_GET['id']) AND !empty($_GET['id'])){
         </div>
     </header>
 
-    <div>
+    <div class="evenement">
         <h1><?= $nom_evenement ?></h1>
-        <p><?= $description_evenement ?></p>   
+        <p><?= $description_evenement ?></p>
+        <p><?= $type_evenement ?></p>
+        <p><?= $date_evenement ?></p>
+        <p><?= $horaire_evenement ?></p>
     </div>
 
     <footer id="footer">

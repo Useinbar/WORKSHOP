@@ -24,6 +24,7 @@
                 <li><a href="calendrier.php" class="nav-link">Calendrier</a></li>
                 <li><a href="proposer.php" class="nav-link">Proposer</a></li>
                 <li><a href="suggestion.php" class="nav-link">Suggestion</a> </li>
+                <li><a href="formulaires/index.php" class="nav-link">Connexion</a> </li>
             </ul>
         </nav>
         <div class="landing-text">
