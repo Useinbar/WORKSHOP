@@ -1,43 +1,4 @@
-a {
-	 
-	font-size: 14px;
-	line-height: 1.7;
-	color: #FFFFFF;
-	margin: 0px;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-}
 
-a:focus {
-	outline: none !important;
-}
-
-a:hover {
-	text-decoration: none;
-}
-
-/*---------------------------------------------*/
-h1,h2,h3,h4,h5,h6 {
-	margin: 0px;
-}
-
-p {
-	 
-	font-size: 14px;
-	line-height: 1.7;
-	color: #FFFFFF;
-	margin: 0px;
-}
-
-ul, li {
-	margin: 0px;
-	list-style-type: none;
-}
-
-
-/*---------------------------------------------*/
 input {
 	outline: none;
 	border: none;
@@ -81,10 +42,6 @@ button {
 
 button:hover {
 	cursor: pointer;
-}
-
-iframe {
-	border: none !important;
 }
 
 
@@ -164,7 +121,7 @@ iframe {
 
 .label-input100 {
    
-  font-size: 13px;
+  font-size: 23px;
   color: #FFFFFF;
   line-height: 1.5;
   padding-left: 5px;

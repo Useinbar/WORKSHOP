@@ -63,24 +63,24 @@ if (isset($_POST['nom_evenement'], $_POST['type_evenement'], $_POST['date_evenem
 
                     <div class="wrap-input100 validate-input" data-validate="Name is required">
                         <span class="label-input100">Le nom de l'événement !</span>
-                        <input class="input100" type="text" name="nom_evenement" placeholder="Enter le nom de l'event">
+                        <input class="input100" type="text" name="nom_evenement" placeholder="Entrer le nom de votre événement">
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate = "Type is required">
                         <span class="label-input100">Le type d'evenement !</span>
-                        <input class="input100" type="text" name="type_evenement" placeholder="Type">
+                        <input class="input100" type="text" name="type_evenement" placeholder="Entrer le type de votre événement">
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100">
-                        <span class="label-input100">la date de l'evenement !</span>
-                        <input class="input100" type="date" name="date_evenement" placeholder="Date">
+                        <span class="label-input100">La date de l'evenement !</span>
+                        <input class="input100" type="date" name="date_evenement" placeholder="Entrer la date de votre événement">
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate = "Message is required">
                         <span class="label-input100">La description de l'evenement !</span>
-                        <textarea class="input100" name="description_evenement" placeholder="Description"></textarea>
+                        <textarea class="input100" name="description_evenement" placeholder="Entrer la description de votre événement"></textarea>
                         <span class="focus-input100"></span>
                     </div>
 
