@@ -55,7 +55,7 @@ if (isset($_POST['nom_evenement'], $_POST['type_evenement'], $_POST['date_evenem
     </header>
 
 
-    <section class="sectionCenterEvent">
+    <section class="sectionCenter">
         <div class="container-contact100">
             <div class="wrap-contact100">
                 <form class="contact100-form validate-form">
