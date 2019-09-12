@@ -9,10 +9,13 @@ include("../formulaires/config.php");
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
    <head>
       <title>Blog</title>
-      <meta http-equiv="Content-Type" content="text/html;
-charset=utf-8" />
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+      <link href="https://localhost/WORKSHOP/style.css">
    </head>
 <body>
+
+
+
 <?php
 $connect = mysqli_connect("127.0.0.1", "root", "", "test");
 
@@ -60,6 +63,8 @@ $resultat = mysqli_query($connect,$requete);
 $identifiant = mysqli_insert_id($connect);
 /* Fermeture de la connexion */
 mysqli_close($connect);
+
+
 
 if ($identifiant != 0) {
    echo "<br />Ajout du commentaire réussi.<br /><br />";
