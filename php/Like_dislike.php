@@ -1,5 +1,6 @@
 <?php 
-$bdd = new PDO("mysql:host=127.0.0.1;dbname=test;charset=utf8", "root", "");
+include(config.php);
+
 if(isset($_GET['t'],$_GET['id']) AND !empty($_GET['t']) AND !empty($_GET['id'])){
     $getid = (int) $_GET['id'];
     $gett = (int) $_GET['t'];
@@ -33,7 +34,7 @@ if(isset($_GET['t'],$_GET['id']) AND !empty($_GET['t']) AND !empty($_GET['id']))
                $ins->execute(array($getid, $sessionid));
             }
         }
-        header('location: http://localhost/WORKSHOP/Proposition_Detail.php?id='.$getid );
+        header('location: http://localhost/WORKSHOP/proposition_Detail.php?id='.$getid );
      } else {
          exit('erreur fatale <a href="http://localhost/WORKSHOP/">Revenir à l\'accueil</a>');
      }
