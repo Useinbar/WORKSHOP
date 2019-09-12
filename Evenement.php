@@ -55,16 +55,17 @@ if (isset($_GET['id']) AND !empty($_GET['id'])){
             </ul>
         </nav>
         <div class="landing-text">
-            <h1>BDE EPSI GRENOBLE</h1>
+            <h1>CAMPUS HEP GRENOBLE</h1>
+            <h6>EVENEMENT</h6>
         </div>
     </header>
 
     <div class="evenement">
         <h1><?= $nom_evenement ?></h1>
-        <p><?= $description_evenement ?></p>
-        <p><?= $type_evenement ?></p>
-        <p><?= $date_evenement ?></p>
-        <p><?= $horaire_evenement ?></p>
+        <p>Type : <?= $type_evenement ?></p>
+        <p>Date : <?= $date_evenement ?></p>
+        <p>Horaire : <?= $horaire_evenement ?></p>
+        <p>Description : <?= $description_evenement ?></p>
     </div>
 
     <footer id="footer">

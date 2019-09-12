@@ -247,9 +247,12 @@ li{
     user-select: none;
 }
 
-.langing-text h6{
-    font-size: 2rem;
+.landing-text h6{
+    font-size: 2.5rem;
     font-weight: 300px;
+    background-image: linear-gradient(to right bottom, #2f91ff, #00c513, #2f91ff, #00c513);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
@@ -302,7 +305,7 @@ html{
     }
 
     .nav-link{
-        font-size: 3rem;
+        font-size: 3rem;linear-gradient(to right top, #2f91ff, #00c513, #2f91ff, #00c513);
     }
 }
 
@@ -331,13 +334,39 @@ html{
     }
 }
 
-                                /* FOOTER */
+                                /* EVENEMENT */
 
 .evenement{
-    margin-top: 25rem;
+    margin-top: 20rem;
+    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    margin-left: auto;
+    margin-right:auto;
+    text-align: center;
+    background-color: white;
+    color: #1a1a1a;
+    width: 35vw;
+    border-radius: 25px;
+    padding: 1.5rem;
+    padding-bottom: 5rem;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #0eedc4;  
 }
 
 .evenement h1{
-    text-align: center;
-    text
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    width: 30vh;
+    font-size: 50px;
+    padding-bottom: 2rem;
+    border-bottom: 3px solid #363434;
+    
 }
