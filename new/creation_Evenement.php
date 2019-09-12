@@ -8,7 +8,7 @@
     <meta name="Description" content="Site du campus HEP de Grenoble.">
 	<link href="https://fonts.googleapis.com/css?family=Livvic|Source+Sans+Pro:600|Ubuntu:300&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="style.css">
-	<title>Creation d'un Evenement !</title>
+	<title>Campus HEP Grenoble</title>
 </head>
 <body>
 	<header class="header-login-signup">
@@ -27,8 +27,8 @@
 	</header>
 	
 
-	<section>
-	
+	<section class="sectionBackground">
+		
 	</section>
 
 
