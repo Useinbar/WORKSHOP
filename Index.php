@@ -47,6 +47,7 @@
         </section>
 	</section>
     
+    
     <footer id="footer">
         <p class="footerUp">Créé avec ❤️️ à Grenoble, France 🗻
         <br>
@@ -58,6 +59,7 @@
             <li><img src="medias/discord.svg" height="30px"><a href="https://discordapp.com/" target="blank" class="footerLink">Discord</a> </li>
         </ul>
     </footer>
+	
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="main.js"></script>

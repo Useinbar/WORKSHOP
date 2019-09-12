@@ -1,5 +1,5 @@
 <?php 
-$bdd = new PDO("mysql:host=127.0.0.1;dbname=test;charset=utf8", "root", "");
+include(config.php);
 
 if (isset($_POST['nom_evenement'], $_POST['type_evenement'], $_POST['date_evenement'], $_POST['horaire_evenement'], $_POST['description_evenement'])){
     if(!empty($_POST['nom_evenement']) AND !empty($_POST['type_evenement']) AND !empty($_POST['date_evenement']) AND !empty($_POST['horaire_evenement']) AND !empty($_POST['description_evenement'])){
@@ -14,10 +14,10 @@ if (isset($_POST['nom_evenement'], $_POST['type_evenement'], $_POST['date_evenem
         $ins = $bdd->prepare('INSERT INTO evenement (nom_evenement, type_evenement, date_evenement, horaire_evenement, description_evenement) VALUES(?, ?, ?, ?, ?)');
         $ins->execute(array($nom_evenement, $type_evenement, $date_evenement, $horaire_evenement, $description_evenement));  
 
-        $message = 'Votre événement à bien était posté';
+        $message = 'Votre événement a bien été posté';
 
     } else {
-            $message='veuillez remplir tous les champs';
+            $message='Veuillez remplir tous les champs';
         }
 }
 ?>
@@ -33,7 +33,9 @@ if (isset($_POST['nom_evenement'], $_POST['type_evenement'], $_POST['date_evenem
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link href="https://fonts.googleapis.com/css?family=Livvic|Ubuntu:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="util.css">
 	<title>BDE Evenement</title>
     </head>
     <header>
@@ -50,29 +52,73 @@ if (isset($_POST['nom_evenement'], $_POST['type_evenement'], $_POST['date_evenem
                 <li><a href="suggestion.php" class="nav-link">Suggestion</a> </li>
             </ul>
         </nav>
-        <div class="landing-text">
-            <h1>BDE EPSI GRENOBLE</h1>
-        </div>
     </header>
 
-    <form method="POST">
-        <input type="text" name="nom_evenement" placeholder="Nom"><br>
-        <input type="text" name="type_evenement" placeholder="Type"><br>
-        <input type="date" name="date_evenement" placeholder="Date"><br>
-        <input type="time" name="horaire_evenement" placeholder="Heure"><br>
-        <textarea name="description_evenement" placeholder="Description"></textarea><br>
-        <input type="submit" value="Valider">
-    </form>
+
+    <section class="sectionCenterEvent">
+        <div class="container-contact100">
+            <div class="wrap-contact100">
+                <form class="contact100-form validate-form">
+                    <span class="contact100-form-title">
+                        Proposition d'Evenement !
+                    </span>
+
+                    <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Name is required">
+                        <span class="label-input100">Le Nom de l'eveneent !</span>
+                        <input class="input100" type="text" name="nom_evenement" placeholder="Nom">
+                    </div>
+
+                    <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Type is required">
+                        <span class="label-input100">Le type d'evenement !</span>
+                        <input class="input100" type="text" name="type_evenement" placeholder="Type">
+                    </div>
+
+                    <div class="wrap-input100">
+                        <span class="label-input100">la date de l'evenement !</span>
+                        <input class="input100" type="date" name="date_evenement" placeholder="Date">
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate = "Message is required">
+                        <span class="label-input100">La description de l'evenement !</span>
+                        <textarea class="input100" name="description_evenement" placeholder="Description"></textarea>
+                    </div>
+
+                    <div class="container-contact100-form-btn">
+                        <div class="wrap-contact100-form-btn">
+                            <div class="contact100-form-bgbtn"></div>
+                            <button class="contact100-form-btn">
+                                Proposer !
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="dropDownSelect1"></div>
+
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23581568-13');
 
     <?php if(isset($message)){ echo $message; } ?>
- 
-	<section class="sectionCenter">
-		<p>Test</p>
-	</section>
+    </script>
+
+    </section>
+
     <footer id="footer">
-        <p class="pfooter">Créé avec ❤️️ à Grenoble, France 🗻</p>
-        <p class="pfooter">© 2019 BDE EPSI, Tous droits réservés.</p>
-	</footer>
+        <p class="footerUp">Créé avec ❤️️ à Grenoble, France 🗻
+        <br>
+        <br>
+        © 2019 BDE EPSI Grenoble, Tous droits réservés.</p>
+        <ul class="footerList">
+            <li><img src="medias/facebook.png" height="30px"><a href="https://www.facebook.com/bdeepsigrenoble" target="blank" class="footerLink">Facebook</a></li>
+            <li><img src="medias/instagram.png"  height="30px"><a href="https://www.instagram.com/bdeepsigre/" target="blank" class="footerLink">Instagram</a></li>
+            <li><img src="medias/discord.png" height="30px"><a href="https://discordapp.com/" target="blank" class="footerLink">Discord</a> </li>
+        </ul>
+    </footer>
 	
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

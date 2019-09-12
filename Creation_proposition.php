@@ -1,5 +1,5 @@
 <?php 
-$bdd = new PDO("mysql:host=127.0.0.1;dbname=test;charset=utf8", "root", "");
+include(config.php);
 
 if (isset($_POST['nom_proposition'], $_POST['description_proposition'], $_POST['date_proposition'])){
     if(!empty($_POST['nom_proposition']) AND !empty($_POST['description_proposition']) AND !empty($_POST['date_proposition'])){
