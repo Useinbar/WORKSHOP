@@ -6,7 +6,7 @@ if (isset($_COOKIE['pseudo']))
   $_SESSION['pseudo'] = $_COOKIE['pseudo'];
 }
   
-  ?>
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
