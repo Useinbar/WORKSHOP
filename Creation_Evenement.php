@@ -55,7 +55,7 @@ if (isset($_POST['nom_evenement'], $_POST['type_evenement'], $_POST['date_evenem
     </header>
 
 
-    <section class="sectionCenterEvent">
+    <section class="sectionCenter">
         <div class="container-contact100">
             <div class="wrap-contact100">
                 <form class="contact100-form validate-form">
@@ -96,15 +96,15 @@ if (isset($_POST['nom_evenement'], $_POST['type_evenement'], $_POST['date_evenem
         </div>
         <div id="dropDownSelect1"></div>
 
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'UA-23581568-13');
+        gtag('config', 'UA-23581568-13');
 
-    <?php if(isset($message)){ echo $message; } ?>
-    </script>
+        <?php if(isset($message)){ echo $message; } ?>
+        </script>
 
     </section>
 
