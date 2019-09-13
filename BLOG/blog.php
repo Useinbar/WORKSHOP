@@ -34,6 +34,7 @@ include("../formulaires/config.php");
          echo "<h3>".$ligne['Titre']."</h3>";
       //   echo "<h4>Le ".$dt_debut->format('d/m/Y H:i:s')."</h4>";
          echo "<div style='width:400px'>".$ligne['Commentaire']." </div>";
+         echo "<a href='commentaires.php?id_article=".$ligne['Id_article']."'>Ajoutez un commentaire.</a>"; 
          if ($ligne['Photo'] != "") {
             echo "<img src='photos/".$ligne['Photo']."' width='200px' height='200px'/>";
          }
