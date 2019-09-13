@@ -20,8 +20,8 @@
 				<a href="suggestion.php">Suggestion</a>
 			</nav>
 			<ul>
-				<li><a href="singin.php">Connexion</a></li>
-				<li><a href="singup.php">Inscription</a></li>
+				<li><a href="#">Connexion</a></li>
+				<li><a href="#">Inscription</a></li>
 			</ul>
 		</div>
 	</header>
@@ -49,17 +49,17 @@
 		<div class="footer-left">
 			<h3>HEP Campus <span>Grenoble</span></h3>
 			<p class="footer-links">
-				<a href="index.php">Accueil</a>
+				<a href="#">Accueil</a>
 				·
 				<a href="#">Calendrier</a>
 				·
-				<a href="creation_Evenement.php">Proposer</a>
+				<a href="#">Proposer</a>
 				·
 				<a href="#">Suggestion</a>
 				·
-				<a href="singin.php">Connexion</a>
+				<a href="#">Connexion</a>
 				·
-				<a href="singup.php">Inscription</a>
+				<a href="#">Inscription</a>
 			</p>
 			<p class="footer-company-name">Axsiow &copy; 2019</p>
 		</div>
