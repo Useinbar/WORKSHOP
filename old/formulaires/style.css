@@ -1,0 +1,332 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;      
+    margin: 0px;
+    padding: 0px;
+    background-color: #1A1A1A;
+	color: white;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+
+                                /* Section Center */
+
+
+.sectionCenter{
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sectionCenterEvent{
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30%;        
+}
+
+.titleEvent{
+    font-family: 'Livvic', sans-serif;
+    font-size: 36px;
+}
+
+.descEvent{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+}
+
+.sectionCenterIn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.sectionCenterIn{
+    box-sizing: border-box;
+    background: linear-gradient(#1a1a1a, #1a1a1a), 
+    linear-gradient(to right top, #2f91ff, #00c513, #2f91ff, #00c513);
+    border: 5px solid transparent;
+    background-repeat: no-repeat;
+    background-origin: padding-box, border-box;
+    border-radius: 7px;
+}
+
+
+                                /* CREATION EVENEMENT */
+
+
+
+
+
+
+                                /* FOOTER */
+
+
+
+#footer{
+    background-color: #1a1a1a;
+    margin-top: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+	padding: 0px;
+	display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 15  0px; 
+    min-width: auto;
+    box-sizing: border-box;
+    background: linear-gradient(#1a1a1a, #1a1a1a), 
+    linear-gradient(to right top, #2f91ff, #00c513, #2f91ff, #00c513);
+    border-top: 5px solid transparent;
+    background-repeat: no-repeat;
+    background-origin: padding-box, border-box;
+}
+
+.footerUp{
+    margin-left: 0px;
+	color: white;
+	font-size: 20px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.footerDown{
+    margin-left: 0px;
+	color: white;
+	font-size: 18px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.footerList{
+    list-style: none;
+}
+
+.footerLink{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    font-size: 26px;
+    padding-top: -10px;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.footerList li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+                             /* NAV BAR*/
+
+
+header{
+    width: 100%;
+    height: 70vh;
+}
+
+.top-nav{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: -100vh;
+    z-index: 50;
+    /* background-color: #16162d; */
+    background-image: linear-gradient(to right top, #2f91ff, #00c513, #2f91ff, #00c513);
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    transition: all 650ms cubic-bezier(1,0,0,1);
+}
+
+.nav-list{
+	list-style: none;
+	text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    margin: 0 2rem;
+}
+
+.nav-link{
+    font-family: 'Livvic', sans-serif;
+    font-size: 5rem;
+	padding: 1rem;
+	text-decoration: none;
+	color: white;
+}
+
+.nav-link:hover,
+.nav-link:focus{
+    background: linear-gradient(to top, #1a1a1a, #363434); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.top-nav.open{
+    top: 0;
+    border-radius: initial;
+}
+
+.menu-toggler{
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    width: 5rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1500;
+    transition: transform 650ms ease-out;
+}
+
+.menu-toggler.open{
+    transform: rotate(-45deg);
+}
+
+.bar{
+    background-image: linear-gradient(to right top, #2f91ff, #00c513, #2f91ff, #00c513);
+    width: 100%;
+    height: 4px;
+    border-radius: .8rem;
+}
+
+.bar.half{
+    width: 50%;
+}
+
+.bar.start{
+    transform-origin: right;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+.open .bar.start{
+    transform: rotate(-450deg) translateX(.8rem);
+}
+
+.bar.end{
+    align-self: flex-end;
+    transform-origin: left;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+.open .bar.end{
+    transform: rotate(-450deg) translateX(-.8rem);
+}
+
+.landing-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.landing-text h1{
+    font-size: 7rem;
+    font-family: 'Livvic', sans-serif;
+    background-image: linear-gradient(to right top, #2f91ff, #00c513, #2f91ff, #00c513);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 1rem;
+    user-select: none;
+}
+
+.langing-text h6{
+    font-size: 2rem;
+    font-weight: 300px;
+}
+
+
+                             /* SCROLL BAR */
+    
+                             
+    /* Firefox */
+
+html{
+    scrollbar-color: #505050 #252525;
+}
+
+    /* Chromium */
+
+::-webkit-scrollbar {
+    width: 15px;
+    background: #d6d6d6;
+    border-left: 1px solid #d6d6d6;
+  }
+
+::-webkit-scrollbar-track {
+    background: #252525;
+  }
+  
+::-webkit-scrollbar-thumb {
+    background: #505050;
+  }
+
+
+							 /* RESPONSIVE */
+
+
+@media screen and (max-width: 768px){
+
+    .landing-text h1{
+        font-size: 15rem;
+    }
+
+    .landing-text h6{
+        font-size: 1.7rem;
+    }
+
+    .nav-list{
+		display: flex;
+        flex-direction: column;
+    }
+
+    li{
+        margin: 2rem 0;
+    }
+
+    .nav-link{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .menu-toggler{
+        top: 2rem;
+        right: 2rem;
+    }
+    .landing-text h1{
+        font-size: 5rem;
+    }
+    
+    .landing-text h6{
+        font-size: 1.4rem;
+    }
+
+    .nav-link{
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 1920px){
+    .nav-link{
+        font-size: 3.5rem;
+    }
+}

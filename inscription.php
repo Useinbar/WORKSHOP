@@ -6,7 +6,7 @@ if (isset($_COOKIE['pseudo']))
   $_SESSION['pseudo'] = $_COOKIE['pseudo'];
 }
   
-  ?>
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -31,8 +31,8 @@ if (isset($_COOKIE['pseudo']))
 				<a href="suggestion.php">Suggestion</a>
 			</nav>
 			<ul>
-				<li><a href="#">Connexion</a></li>
-				<li><a href="#">Inscription</a></li>
+				<li><a href="singin.php">Connexion</a></li>
+				<li><a href="singup.php">Inscription</a></li>
 			</ul>
 		</div>
 	</header>

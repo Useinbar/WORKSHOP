@@ -1,15 +1,8 @@
 <?php
-include(config.php);
-
-if (isset($_COOKIE['pseudo']))
-{
-  session_start();
-  $_SESSION['pseudo'] = $_COOKIE['pseudo'];
-}
-
-
-  
-?>
+session_start();
+// $myusername = $_SESSION['username'];
+include("config.php");
+ ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -43,12 +36,47 @@ if (isset($_COOKIE['pseudo']))
 
 	<section class="sectionBackground">
         <div class="divEventSing">
-            <div>
-                <ul>
-                    <?php while ($a = $evenement->fetch()) { ?>
-                    <li><a href="evenement.php?id=<?= $a['id'] ?>"><?= $a['nom_evenement'] ?></a></li>
-                    <?php } ?>
-                </ul>    
+            <h1>
+                <?php
+                    if(!$_SESSION) {
+                    echo '<a href="inscription.php">Inscription</a><br />';
+                    } elseif (isset($_SESSION)) {
+                        echo '<a href="deconnexion.php">deconnexion</a> ';
+                        echo "Bonjour ", $_SESSION['username'] ;
+                    }
+                ?>
+            </h1>
+        <div class="container-contact100">
+            <div class="wrap-contact10">
+                <form class="contact100-form validate-form" action="script.php" method="post">
+                    <span class="contact100-form-title">
+                       Page de connexion !
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-validate="User is required">
+                        <label class="label-input100">Nom d'utilisateur !</label>
+                        <input class="input100" type="text" name="username" class="box" placeholder="Entrer votre nom d'utilisateur"/>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate = "Password is required">
+                        <label class="label-input100">Password :</label>
+                        <input class="input100" type="password" name="password" class="box"laceholder="Entrer votre mot de passe !"/>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="container-contact100-form-btn">
+                        <div class="wrap-contact100-form-btn">
+                            <div class="contact100-form-bgbtn"></div>
+                            <button class="contact100-form-btn">
+                                <span type="submit" value=" CONNEXION ">
+                                    Se connecter    
+                                    <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
