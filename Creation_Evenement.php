@@ -1,5 +1,5 @@
 <?php 
-include(config.php);
+$bdd = new PDO("mysql:host=127.0.0.1;dbname=test;charset=utf8", "root", "");
 
 if (isset($_POST['nom_evenement'], $_POST['type_evenement'], $_POST['date_evenement'], $_POST['horaire_evenement'], $_POST['description_evenement'])){
     if(!empty($_POST['nom_evenement']) AND !empty($_POST['type_evenement']) AND !empty($_POST['date_evenement']) AND !empty($_POST['horaire_evenement']) AND !empty($_POST['description_evenement'])){
