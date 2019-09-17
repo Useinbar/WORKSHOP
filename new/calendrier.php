@@ -1,10 +1,13 @@
 <?php
 include(config.php);
+
 if (isset($_COOKIE['pseudo']))
 {
   session_start();
   $_SESSION['pseudo'] = $_COOKIE['pseudo'];
 }
+
+
   
 ?>
 

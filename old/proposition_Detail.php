@@ -1,23 +1,32 @@
 <?php 
-$bdd = new PDO("mysql:host=127.0.0.1;dbname=test;charset=utf8", "root", "");
+include(config.php);
 
 if (isset($_GET['id']) AND !empty($_GET['id'])){
     $get_id = htmlspecialchars($_GET['id']);
 
-    $evenement = $bdd->prepare('SELECT * FROM evenement WHERE id = ?');
-    $evenement->execute(array($get_id));
+    $proposition = $bdd->prepare('SELECT * FROM proposition WHERE id = ?');
+    $proposition->execute(array($get_id));
 
-    if($evenement->rowCount() == 1){
-        $evenement = $evenement->fetch();
-        $nom_evenement = $evenement['nom_evenement'];
-        $type_evenement = $evenement['type_evenement'];
-        $date_evenement = $evenement['date_evenement'];
-        $horaire_evenement = $evenement['horaire_evenement'];
-        $description_evenement = $evenement['description_evenement'];
-        
+    if($proposition->rowCount() == 1){
+        $proposition = $proposition->fetch();
+        $id = $proposition['id'];
+        $nom_proposition = $proposition['nom_proposition'];
+        $description_proposition = $proposition['description_proposition'];
+        $date_proposition = $proposition['date_proposition'];
+
+
+        //test//
+        $like_proposition = $bdd->prepare('SELECT id FROM like_proposition WHERE id_proposition = ?');
+        $like_proposition->execute(array($id));
+        $like_proposition= $like_proposition->rowCount();
+        $dislike_proposition = $bdd->prepare('SELECT id FROM dislike_proposition WHERE id_proposition = ?');
+        $dislike_proposition->execute(array($id));
+        $dislike_proposition = $dislike_proposition->rowCount();
+
+
 
     } else {
-        die('Cet evenement n\'existe pas');
+        die('Cet proposition n\'existe pas');
     }
 
 } else {
@@ -51,21 +60,21 @@ if (isset($_GET['id']) AND !empty($_GET['id'])){
                 <li><a href="calendrier.php" class="nav-link">Calendrier</a></li>
                 <li><a href="proposer.php" class="nav-link">Proposer</a> </li>
                 <li><a href="suggestion.php" class="nav-link">Suggestion</a> </li>
-                <li><a href="formulaires/index.php" class="nav-link">Connexion</a> </li>
             </ul>
         </nav>
         <div class="landing-text">
-            <h1>CAMPUS HEP GRENOBLE</h1>
-            <h6>EVENEMENT</h6>
+            <h1>BDE EPSI GRENOBLE</h1>
         </div>
     </header>
 
-    <div class="evenement">
-        <h1><?= $nom_evenement ?></h1>
-        <p>Type : <?= $type_evenement ?></p>
-        <p>Date : <?= $date_evenement ?></p>
-        <p>Horaire : <?= $horaire_evenement ?></p>
-        <p>Description : <?= $description_evenement ?></p>
+    <div>
+        <h1><?= $nom_proposition ?></h1>
+        <p><?= $description_proposition ?></p>
+
+        <a href="php/Like_dislike.php?t=1&id<?=$id?>">Like</a> (<?= $like_proposition?>)
+        <br/>
+        <a href="php/Like_dislike.php?t=2&id<?=$id?>">Dislike</a> (<? $dislike_proposition?>)
+           
     </div>
 
     <footer id="footer">
@@ -79,7 +88,6 @@ if (isset($_GET['id']) AND !empty($_GET['id'])){
             <li><img src="medias/discord.png" height="30px"><a href="https://discordapp.com/" target="blank" class="footerLink">Discord</a> </li>
         </ul>
     </footer>
-	
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="main.js"></script>

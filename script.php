@@ -1,6 +1,6 @@
 <?php
   session_start();
-  include("config.php");
+  include(config.php);
 
   if($_SERVER["REQUEST_METHOD"] == "POST") {
     // username and password sent from form
@@ -10,7 +10,7 @@
   //  $mypassword = mysqli_real_escape_string($db,$_POST['password']);
 
   //  $sql = "SELECT * FROM 'info_connexion' WHERE username = '$myusername' and password = '$mypassword'";
-    $sql =  "SELECT * FROM `membres1` WHERE username='$myusername' and password='$mypassword' ";
+    $sql =  "SELECT * FROM `membres1` WHERE username='$myusername' and pswd='$mypassword' ";
   //  $sql =  "SELECT * FROM `membres1` WHERE password='$mypassword'";
     $result = mysqli_query($db,$sql);
     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);

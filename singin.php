@@ -1,25 +1,8 @@
 <?php
-include(config.php);
-
-    if(!empty($_POST['nom_evenement']) AND !empty($_POST['type_evenement']) AND !empty($_POST['date_evenement']) AND !empty($_POST['horaire_evenement']) AND !empty($_POST['description_evenement'])){
-
-        $nom_evenement = htmlspecialchars($_POST['nom_evenement']);
-        $type_evenement = htmlspecialchars($_POST['type_evenement']);
-        $date_evenement = htmlspecialchars($_POST['date_evenement']);
-        $horaire_evenement = htmlspecialchars($_POST['horaire_evenement']);
-        $description_evenement = htmlspecialchars($_POST['description_evenement']);
-        
-
-        $ins = $bdd->prepare('INSERT INTO evenement (nom_evenement, type_evenement, date_evenement, horaire_evenement, description_evenement) VALUES(?, ?, ?, ?, ?)');
-        $ins->execute(array($nom_evenement, $type_evenement, $date_evenement, $horaire_evenement, $description_evenement));  
-
-        $message = 'Votre événement a bien été posté';
-
-    } else {
-            $message='Veuillez remplir tous les champs';
-        }
-}
-?>
+session_start();
+// $myusername = $_SESSION['username'];
+include("config.php");
+ ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -32,7 +15,6 @@ include(config.php);
 	<link href="https://fonts.googleapis.com/css?family=Livvic|Source+Sans+Pro:600|Ubuntu:300&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" hre="util.css">
 	<title>Campus HEP Grenoble</title>
 </head>
 <body>
@@ -46,40 +28,40 @@ include(config.php);
 			</nav>
 			<ul>
 				<li><a href="singin.php">Connexion</a></li>
-				<li><a href="singin.php">Inscription</a></li>
+				<li><a href="singup.php">Inscription</a></li>
 			</ul>
 		</div>
 	</header>
 	
 
 	<section class="sectionBackground">
+        <div class="divEventSing">
+            <h1>
+                <?php
+                    if(!$_SESSION) {
+                    echo '<a href="inscription.php">Inscription</a><br />';
+                    } elseif (isset($_SESSION)) {
+                        echo '<a href="deconnexion.php">deconnexion</a> ';
+                        echo "Bonjour ", $_SESSION['username'] ;
+                    }
+                ?>
+            </h1>
         <div class="container-contact100">
-            <div class="wrap-contact100">
-                <form class="contact100-form validate-form">
+            <div class="wrap-contact10">
+                <form class="contact100-form validate-form" action="script.php" method="post">
                     <span class="contact100-form-title">
-                        Proposition d'Evenement !
+                       Page de connexion !
                     </span>
 
-                    <div class="wrap-input100 validate-input" data-validate="Name is required">
-                        <span class="label-input100">Le nom de l'événement !</span>
-                        <input class="input100" type="text" name="nom_evenement" placeholder="Entrer le nom de votre événement">
+                    <div class="wrap-input100 validate-input" data-validate="User is required">
+                        <label class="label-input100">Nom d'utilisateur !</label>
+                        <input class="input100" type="text" name="username" class="box" placeholder="Entrer votre nom d'utilisateur"/>
                         <span class="focus-input100"></span>
                     </div>
 
-                    <div class="wrap-input100 validate-input" data-validate = "Type is required">
-                        <span class="label-input100">Le type d'evenement !</span>
-                        <input class="input100" type="text" name="type_evenement" placeholder="Entrer le type de votre événement">
-                        <span class="focus-input100"></span>
-                    </div>
-
-                    <div class="wrap-input100">
-                        <span class="label-input100">La date de l'evenement !</span>
-                        <input class="input100" type="date" name="date_evenement" placeholder="Entrer la date de votre événement">
-                    </div>
-
-                    <div class="wrap-input100 validate-input" data-validate = "Message is required">
-                        <span class="label-input100">La description de l'evenement !</span>
-                        <textarea class="input100" name="description_evenement" placeholder="Entrer la description de votre événement"></textarea>
+                    <div class="wrap-input100 validate-input" data-validate = "Password is required">
+                        <label class="label-input100">Password :</label>
+                        <input class="input100" type="password" name="password" class="box"laceholder="Entrer votre mot de passe !"/>
                         <span class="focus-input100"></span>
                     </div>
 
@@ -87,8 +69,8 @@ include(config.php);
                         <div class="wrap-contact100-form-btn">
                             <div class="contact100-form-bgbtn"></div>
                             <button class="contact100-form-btn">
-                                <span>
-                                    Submit
+                                <span type="submit" value=" CONNEXION ">
+                                    Se connecter    
                                     <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
                                 </span>
                             </button>
@@ -97,24 +79,24 @@ include(config.php);
                 </form>
             </div>
         </div>
-	</section>
+    </section>
 
 
 	<footer class="footer-distributed">
 		<div class="footer-left">
 			<h3>HEP Campus <span>Grenoble</span></h3>
 			<p class="footer-links">
-				<a href="index.php">Accueil</a>
+				<a href="#">Accueil</a>
 				·
 				<a href="#">Calendrier</a>
 				·
-				<a href="creation_Evenement.php">Proposer</a>
+				<a href="#">Proposer</a>
 				·
 				<a href="#">Suggestion</a>
 				·
-				<a href="singin.php">Connexion</a>
+				<a href="#">Connexion</a>
 				·
-				<a href="singup.php">Inscription</a>
+				<a href="#">Inscription</a>
 			</p>
 			<p class="footer-company-name">Axsiow &copy; 2019</p>
 		</div>

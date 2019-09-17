@@ -1,67 +1,91 @@
-<?php 
-$bdd = new PDO("mysql:host=127.0.0.1;dbname=test;charset=utf8", "root", "");
-
-$evenement = $bdd->query('SELECT * FROM evenement ORDER BY id DESC');
-
+<?php
+include(config.php);
+if (isset($_COOKIE['pseudo']))
+{
+  session_start();
+  $_SESSION['pseudo'] = $_COOKIE['pseudo'];
+}
+  
 ?>
 
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-    <head>
+<head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="favicon" href="medias/Logo.png" alt="Logo EPSI Grenoble">
-    <meta name="Description" content="Site du BDE EPSI Grenoble.">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<link href="https://fonts.googleapis.com/css?family=Livvic|Ubuntu:700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
-	<title>BDE Calendrier</title>
-    </head>
-    <header>
-        <div class="menu-toggler">
-            <div class="bar half start"></div>
-            <div class="bar"></div>
-            <div class="bar half end"></div>
-        </div>
-        <nav class="top-nav">
-            <ul class="nav-list">
-                <li><a href="index.php" class="nav-link">Accueil</a></li>
-                <li><a href="calendrier.php" class="nav-link">Calendrier</a></li>
-                <li><a href="proposer.php" class="nav-link">Proposer</a> </li>
-                <li><a href="suggestion.php" class="nav-link">Suggestion</a> </li>
-            </ul>
-        </nav>
-        <div class="landing-text">
-            <h1>BDE EPSI GRENOBLE</h1>
-        </div>
-    </header>
+    <meta name="Description" content="Site du campus HEP de Grenoble.">
+	<link href="https://fonts.googleapis.com/css?family=Livvic|Source+Sans+Pro:600|Ubuntu:300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+	<title>Campus HEP Grenoble</title>
+</head>
+<body>
+	<header class="header-login-signup">
+		<div class="header-limiter">
+			<h1><a href="index.php">HEP Campus <span>Grenoble</span></a></h1>
+			<nav>
+				<a href="calendrier.php">Calendrier</a>
+				<a href="creation_Evenement.php">Proposer</a>
+				<a href="suggestion.php">Suggestion</a>
+			</nav>
+			<ul>
+				<li><a href="singin.php">Connexion</a></li>
+				<li><a href="singup.php">Inscription</a></li>
+			</ul>
+		</div>
+	</header>
+	
+
+	<section class="sectionBackground">
+        <div class="divEventCalendar">
+		<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FParis&amp;src=dXZmcW0yZzlkYTk5ZTc3ZTVtMW9uZWxudjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23D21E5B&amp;showDate=1&amp;showTitle=1&amp;showNav=1&amp;showTabs=1" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+		</div>
+    </section>
 
 
-	<div>
-        <ul>
-            <?php while ($a = $evenement->fetch()) { ?>
-            <li><a href="evenement.php?id=<?= $a['id'] ?>"><?= $a['nom_evenement'] ?></a></li>
-            <?php } ?>
-        </ul>    
-    </div>
-    
+	<footer class="footer-distributed">
+		<div class="footer-left">
+			<h3>HEP Campus <span>Grenoble</span></h3>
+			<p class="footer-links">
+				<a href="#">Accueil</a>
+				·
+				<a href="#">Calendrier</a>
+				·
+				<a href="#">Proposer</a>
+				·
+				<a href="#">Suggestion</a>
+				·
+				<a href="#">Connexion</a>
+				·
+				<a href="#">Inscription</a>
+			</p>
+			<p class="footer-company-name">Axsiow &copy; 2019</p>
+		</div>
+		<div class="footer-center">
+			<div>
+				<i class="fa fa-map-marker"></i>
+				<p><span>13 bis rue de la Condamine</span> 38610 Gières, France</p>
+			</div>
+			<div>
+				<i class="fa fa-envelope"></i>
+				<p id="mail"><a href="mailto:bde@axsiow.ovh">bde@axsiow.ovh</a></p>
+			</div>
+		</div>
+		<div class="footer-right">
+			<p class="footer-company-about">
+				<span>À propos</span>
+				Créé avec ❤️️ à Grenoble, France 🗻	
+			</p>
+			<div class="footer-icons">
+				<a href="https://www.facebook.com/bdeepsigrenoble" target="blank"><img src="medias/facebook.png" height="35px"><i class="fa fa-facebook"></i></a>
+				<a href="https://www.instagram.com/bdeepsigre/" target="blank"><img src="medias/instagram.png" height="35px"><i class="fa fa-instagram"></i></a>
+				<a href="https://discordapp.com" target="blank"><img src="medias/discord.png" height="35px"><i class="fa fa-discord"></i></a>
+				<a href="https://github.com/Useinbar/WORKSHOP" target="blank"><img src="medias/github.png" height="35px"><i class="fa fa-github"></i></a>
+			</div>
+		</div>
+	</footer>
 
-    <footer id="footer">
-        <p class="footerUp">Créé avec ❤️️ à Grenoble, France 🗻
-        <br>
-        <br>
-        © 2019 BDE EPSI Grenoble, Tous droits réservés.</p>
-        <ul class="footerList">
-            <li><img src="medias/facebook.png" height="30px"><a href="https://www.facebook.com/bdeepsigrenoble" target="blank" class="footerLink">Facebook</a></li>
-            <li><img src="medias/instagram.png"  height="30px"><a href="https://www.instagram.com/bdeepsigre/" target="blank" class="footerLink">Instagram</a></li>
-            <li><img src="medias/discord.png" height="30px"><a href="https://discordapp.com/" target="blank" class="footerLink">Discord</a> </li>
-        </ul>
-    </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="main.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</body>
 </html>
